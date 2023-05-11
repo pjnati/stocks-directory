@@ -19,6 +19,14 @@ $(document).ready(function() {
     widgetButtonResize();
   });
 
-  // tradingview 
+  // Tradingview copyright hidden 
   $('.tradingview-widget-copyright').remove();
+
+  // To Group
+  $("a.scrollLink").click(function(event) {
+    event.preventDefault();
+    $("html, body").animate({
+        scrollTop: $($(this).attr("href")).offset().top - 70
+      }, 500);
+  });
 });
